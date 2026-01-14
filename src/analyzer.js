@@ -1,3 +1,17 @@
+/*
+  Модуль анализа логов
+
+  Аргументы:
+  - logs: массив объектов логов, каждый объект должен содержать { timestamp, type, user, action }
+
+  Возвращает объект:
+  {
+    totalLines: число всех строк (не учитывая битые - invalidLines),
+    errorsCount: число ошибок типа "ERROR",
+    topUsers: массив из максимум 3 объектов { user, errors }, отсортированных по убыванию числа ошибок
+  }
+*/
+
 export function analyzeLogs(logs) {
     let totalLines = 0;
     let errorsCount = 0;
