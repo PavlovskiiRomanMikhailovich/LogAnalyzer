@@ -1,5 +1,5 @@
 const LOG_REGEX =
-  /^(\S+)\s+([A-Z]+)\s+user=(\d+)\s+action=(.+)$/;
+  /^(\S+)\s+(.+?)\s+user=(\d+)\s+action=(.+)$/;
 
 export function parseLogLine(line) {
   const match = line.match(LOG_REGEX);
